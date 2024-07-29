@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Issueing</title>
+    <link rel="stylesheet" href="../css/teacherissueing.css">
+    <link rel="icon" type="image/svg+xml" href="../images/logo_pis.png">
+</head>
+<body>
+    <div class="nav">
+        <img src="../images/logo_pis.png" alt="logo" id="logo"/>
+        <div class="text">
+          <h1 id="header">PRAVANANDA INTERNATIONAL SCHOOL</h1>
+          <h3 id="text1">(An Educational Unit of Bharat Sevasharam Sangha)</h3>
+          <h2 id="text2">School with a  difference</h2>
+        </div>
+        <img src="../images/guruji.jpg" alt="guru" id="guru"/>
+    </div>
+
+    <div class="form">
+        <center>
+     <label for="EmpIDInput"> Teacher ID:</label>       
+    <input id="EmpIDInput" type="text">
+    <br>
+    <!--form to fetch the details of the teacher-->
+    <button id="fetchButton">Fetch Details</button>
+    <div id="detailsContainer" class="hidden" >
+        <h2>--Teacher Details--</h2>
+        <p><strong>Name:</strong> <span id="teacherName"></span></p>
+        <p><strong>Teacher ID:</strong> <span id="EmpID"></span></p>
+        <p><strong>Email:</strong> <span id="mail"></span></p>
+        <p><strong>DOB:</strong> <span id="DOB"></span></p>
+        <!--display the data of the book in the form of a tabel-->
+        <div class="container1">
+            <h1>Books Data</h1>
+            <table id="data-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Year</th>
+                </tr>
+              </thead>
+              <tbody id="table-body"></tbody>
+            </table>
+          </div>
+        
+        <!--for issueing the books-->
+        <div id="issueBookForm" class="hidden">
+            <label for="bookIdInput">Enter Book Code</label>
+            <input type="text" id="bookIdInput" placeholder="Enter Book ID">
+            <br>
+            <button id="issueBookButton">Issue Book</button>
+            <p id="submissionDate"></p>
+        </div>
+    </div>
+</center>
+</div>
+    <script type="module" src="../js/teacherissueing.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bookmanagement.css">
+    <title>Book Management</title>
+    <link rel="icon" type="image/svg+xml" href="../images/logo_pis.png">
+    
+
+</head>
+<body>
+    <div class="nav">
+        <img src="../images/logo_pis.png" alt="logo" id="logo"/>
+        <div class="text">
+          <h1 id="header">PRAVANANDA INTERNATIONAL SCHOOL</h1>
+          <h3 id="text1">(An Educational Unit of Bharat Sevasharam Sangha)</h3>
+          <h2 id="text2">School with a  difference</h2>
+        </div>
+        <img src="../images/guruji.jpg" alt="guru" id="guru"/>
+    </div>
+    <center>
+    <div id="toggleform">
+        
+    <button id="showAddFormButton">Add Book</button>
+    <button id="showSearchFormButton">Search/Delete Book</button> 
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    </div>
+
+    <form id="addForm" class="hidden">
+        <center><h1>--Add Book Details--</h1>
+            <label for="title">Title:</label>
+            <input  id="title" name="title" required><br>
+        
+            <label for="author">Author:</label>
+            <input  id="author" name="author" required>
+    
+            <label for="publisher">Publisher:</label>
+            <input  id="publisher" name="publisher"  required> <br>
+
+            <label for="pages">No of Pages:</label>
+            <input  id="pages" name="pages"  required>
+    
+            <label for="price">Price:</label>
+            <input  id="price" name="price" required><br>
+            
+            <label for="accno">Accession No:</label>
+            <input  id="accno" name="Accession No" required>
+            
+            <label for="classficationNo">Classification No:</label>
+            <input  id="classficationNo" name="classficationNo" required><br>
+
+            <button id="addbtndetails"type="submit">Add Book</button><br>
+        
+            <svg id="barcodeSvg"></svg><br>
+    
+        <button id="printBarcodeButton" class="hidden">Print Barcode</button>
+    </center>
+    </form>
+    
+    
+    <!--Form to search the data in the form -->
+    <form id="searchForm" class="hidden">
+        
+
+    <label id="documentIdtxt"for="documentId">Book Reference ID:</label>
+    <input type="text" id="documentId" placeholder="Enter Book Reference ID"><br>
+    <button id="viewButton">View Details</button>
+
+    <div id="bookDetails" class="hidden">
+        <!-- Display book details here -->
+        <h2>Book Details</h2>
+      <p><strong>Title:</strong> <span id="title1"></span></p>
+      <p><strong>Author:</strong> <span id="author1"></span></p>
+      <!--<p><strong>Year:</strong> <span id="year1"></span></p>-->
+      <p><strong>No of Pages:</strong> <span id="page1"></span></p>
+      <p><strong>Price:</strong> <span id="price1"></span></p>
+      <p><strong>Accession No:</strong> <span id="accno1"></span></p>
+      <p><strong>Decimal No:</strong> <span id="dccno1"></span></p>
+
+    
+
+      <button id="deleteButton" class="hidden">Delete Book</button>
+    </div>
+
+    
+    </form>
+</center>
+
+    <script type="module" src="../js/bookmanagement.js"></script>
+</body>
+</html>
